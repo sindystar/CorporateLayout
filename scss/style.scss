@@ -1,88 +1,47 @@
 @charset 'utf-8';
 
-@import "reset.scss";
+
 
 #header{
-  position: fixed;
   width: 100%;
-  z-index: 10;
-  background: rgb(127, 54, 245);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  .inner {
+  border-bottom: 1px solid #ddd;
+  .inner{
     width: 1180px;
+    height: 100px;
     margin: 0 auto;
-    .logo{
+    position: relative;
+    .btnCall{
+      display: block;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
       i{
-        font-size: 30px;
-        margin-top: 30px;
-        color: #fff;
+        font-size: 50px;
+        color:#000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        &.close{
+          opacity: 0;
+          transform: rotateY(180deg);
+        }
+        &.open{
+          opacity: 1;
+          transform: rotateY(0deg);
+        }
       }
-    }
-    .nav_web{
-      #gnb{
-        display: inline-flex;
-        color: #fff;
-        li{
-          width: 120px;
-          padding: 15px;
-          margin: 15px 30px 0;
-          a{ 
-            color: #fff;
-          }
-          &:hover{
-            background: rgb(143, 177, 252);
-            .sub_menu-1 {
-              display: block;
-              position: absolute;
-              margin-top: 15px;
-              margin-left: -15px;
-              background: rgb(143, 177, 252);
-              ul{
-                display: block;
-                li{
-                  width: 150px;
-                  padding: 10px;
-                  border-bottom: 3px solid #fff;
-                  background: transparent;
-                  // 헤더 영역의 배경을 공유
-                  text-align: left;
-                  &:last-child {
-                    border-bottom: none;
-                  }
-                  // a{
-                  //   width: 100px;
-                  //   &:hover{
-                  //     color: #000;
-                  //   }
-                  // }
-                  a:hover {
-                    color: #000;
-                  }
-                  .fa-angle-right {
-                    float: right;
-                  }
-                  &.isSub:hover .sub_menu-2 {
-                    position: absolute;
-                    display: block;
-                    background: rgb(143, 177, 252);
-                    margin-top: -40px;
-                    margin-left: 140px;
-                  }
-                }
-              }
-            }
-          }
-          .sub_menu-1 {
-            display: none;
-            .sub_menu-2 {
-              display: none;
-            }
-          }
-            
-          
+      &.on{
+        .close{
+          opacity: 1;
+          transform: rotateY(0deg);
+        }
+        .open{
+          opacity: 0;
+          transform: rotateY(180deg);
         }
       }
     }
