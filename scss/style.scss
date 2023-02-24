@@ -60,7 +60,7 @@
       right: 30px;
       top: 50%;
       transform: translateY(-50%);
-      // display: none;
+      display: none;
       width: 20px;
       height: 20px;
       &::before{
@@ -120,7 +120,7 @@
       background: #333;
       position: fixed;
       top: 0;
-      // left: -270px;
+      left: -270px;
       padding: 35px 30px;
       z-index: 10;
       transition: 0.5s;
@@ -153,6 +153,100 @@
             font: bold 14px/1 'arial';
             color: #888;
             text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+// visual
+#visual{
+  width: 100%;
+  height: calc(100vh - 121px);
+  overflow: hidden;
+  background: #000;
+  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+  }
+  .inner{
+    width: 1180px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1{
+      font: normal 120px/1 'arial';
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    p{
+      font: 16px/1.4 'arial';
+      color: #888;
+      margin-bottom: 80px;
+    }
+    a{
+      display: block;
+      width: 400px;
+      height: 30px;
+      border: 1px solid #bbb;
+      font: bold 11px/30px 'arial';
+      color: #fff;
+      text-align: center;
+      &:hover{
+        background: #fff;
+        color: #555;
+      }
+    }
+  }
+}
+// news
+#news{
+  width: 100%;
+  padding: 200px 0;
+  .inner{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+    h1{
+      font: bold 24px/1 'arial';
+      color: #555;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .wrap{
+      width: 100%;
+      article{
+        float: left;
+        width: 280px;
+        margin-right: 20px;
+        &:last-of-type{
+          margin-right: 0;
+        }
+        .pic{
+          width: 100%;
+          height: 120px;
+          overflow: hidden;
+
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+          }
+          &:hover{
+            img{
+              transform: scale(1.2);
+            }
+          }
+        }
+        h2{
+          margin-bottom: 10px;
+          a{
+            font: bold 16px/1 'arial';
           }
         }
       }
