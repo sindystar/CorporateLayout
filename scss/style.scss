@@ -1,6 +1,9 @@
 @charset 'utf-8';
 @import "reset.scss";
 
+$tablet: 1179px;
+$mobile: 539px;
+
 @import "sub_layout.scss";
 @import "community.scss";
 

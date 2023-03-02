@@ -234,6 +234,65 @@ a {
   color: #777;
 }
 
+@media screen and (max-width: 1179px) {
+  #header_sub .inner {
+    width: 100%;
+    height: 100px;
+  }
+  #header_sub .inner .menuWeb {
+    display: none;
+  }
+  #header_sub .inner .btnCall {
+    display: block;
+  }
+  #header_sub .inner .menuMo {
+    display: block;
+  }
+  .content {
+    padding: 0 0 100px;
+  }
+  .content .sub_visual {
+    height: 200px;
+    margin-bottom: 80px;
+  }
+  .content .inner {
+    width: 100%;
+    min-height: 400px;
+    padding: 0 30px;
+  }
+  #footer_sub {
+    padding: 80px 30px;
+  }
+  #footer_sub .inner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 539px) {
+  .content {
+    padding: 0 0 80px;
+  }
+  .content .sub_visual {
+    height: 150px;
+  }
+  .content .inner {
+    min-height: 300px;
+  }
+  .content .inner h1 {
+    font-size: 42px;
+  }
+  .content .inner h1 span {
+    display: block;
+    margin-top: 10px;
+  }
+  #footer_sub .inner ul {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #footer_sub .inner ul li {
+    margin-left: 0px;
+    margin: 5px;
+  }
+}
 .community .sub_visual {
   background: url(../img/brand3.jpg) no-repeat center/cover;
 }
