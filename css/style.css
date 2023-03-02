@@ -188,10 +188,15 @@ a {
   min-height: 500px;
 }
 .content .inner h1 {
-  font: normal 20px/1 "맑은 고딕";
+  font: normal 50px/1 "arial";
+  color: #000;
+  margin-bottom: 60px;
+}
+.content .inner h1 span {
+  font: normal 20px/1 "맑은고딕";
   color: #aaa;
 }
-.content .inner h1::before {
+.content .inner h1 span::before {
   content: "/";
   margin-right: 20px;
   margin-left: 10px;
@@ -381,6 +386,54 @@ a {
   color: #fff;
 }
 
+@media screen and (max-width: 1179px) {
+  .community .inner table tr th:nth-of-type(1) {
+    width: 13%;
+  }
+  .community .inner table tr th:nth-of-type(3) {
+    width: 20%;
+  }
+  .community .inner table tr th:nth-of-type(4) {
+    width: 0%;
+    display: none;
+  }
+  .community .inner table tr td:nth-of-type(4) {
+    display: none;
+  }
+  .community .inner .pagination .numbers a:nth-of-type(6) {
+    display: none;
+  }
+  .community .inner .pagination .numbers a:nth-of-type(7) {
+    display: none;
+  }
+  .community .inner .pagination .numbers a:nth-of-type(8) {
+    display: none;
+  }
+  .community .inner .pagination .numbers a:nth-of-type(9) {
+    display: none;
+  }
+  .community .inner .pagination .numbers a:nth-of-type(10) {
+    display: none;
+  }
+}
+@media screen and (max-width: 539px) {
+  .community .inner table tr th {
+    font-size: 13px;
+  }
+  .community .inner table tr th:nth-of-type(1) {
+    width: 0%;
+    display: none;
+  }
+  .community .inner table tr th:nth-of-type(3) {
+    width: 29%;
+  }
+  .community .inner table tr td:nth-of-type(1) {
+    display: none;
+  }
+  .community .inner .pagination .numbers {
+    display: none;
+  }
+}
 #header {
   width: 100%;
   border-bottom: 1px solid #ddd;

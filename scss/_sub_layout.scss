@@ -168,13 +168,18 @@
     margin: 0 auto;
     min-height: 500px;
     h1 {
-      font: normal 20px/1 "맑은 고딕";
-      color: #aaa;
-      &::before {
+      font: normal 50px/1 "arial";
+      color: #000;
+      margin-bottom: 60px;
+      span {
+        font:normal 20px/1 "맑은고딕";
+        color: #aaa;
+        &::before {
         content: "/";
         margin-right: 20px;
         margin-left: 10px;
-      }
+        }
+      }     
     }
   }
 }
