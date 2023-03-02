@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -24,6 +25,94 @@ a {
   content: "";
   display: block;
   clear: both;
+}
+
+.community .sub_visual {
+  background: url(../img/brand3.jpg) no-repeat center/cover;
+}
+.community .inner table {
+  width: 100%;
+  border-bottom: 2px solid #111;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+.community .inner table tr:nth-of-type(even) {
+  background: #eee;
+}
+.community .inner table tr:hover {
+  background: lightcyan;
+}
+.community .inner table tr th {
+  padding: 15px;
+  background: #444;
+  color: #fff;
+}
+.community .inner table tr th:nth-of-type(1) {
+  width: 10%;
+}
+.community .inner table tr th:nth-of-type(3) {
+  width: 15%;
+}
+.community .inner table tr th:nth-of-type(4) {
+  width: 15%;
+}
+.community .inner table tr td {
+  padding: 13px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.community .inner table tr td:nth-of-type(2) {
+  text-align: left;
+}
+.community .inner table tr td:nth-of-type(3) {
+  font-family: "맑은고딕";
+}
+.community .inner table tr td a {
+  color: #333;
+  line-height: 1.4;
+}
+.community .inner .pagination {
+  width: 100%;
+  text-align: center;
+}
+.community .inner .pagination::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.community .inner .pagination .prev {
+  float: left;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #555;
+  color: #eee;
+  font-size: 20px;
+  text-align: center;
+}
+.community .inner .pagination .next {
+  float: right;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #555;
+  color: #eee;
+  font-size: 20px;
+  text-align: center;
+}
+.community .inner .pagination .numbers {
+  display: inline-block;
+  text-align: center;
+  font-size: 0;
+}
+.community .inner .pagination .numbers a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #888;
+  font: 11px/30px "arial";
+  color: #666;
+  color: #fff;
 }
 
 #header {
