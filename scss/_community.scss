@@ -85,7 +85,12 @@
           border: 1px solid #888;
           font: 11px/30px "arial";
           color: #666;
-          color: #fff;
+          margin: 0 5px;
+          transition: 0.5s;
+          &:hover {
+            background: #666;
+            color: #fff;
+          }         
         }
       }
     }
