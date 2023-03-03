@@ -491,6 +491,22 @@ a {
   color: #aaa;
 }
 
+@media screen and (max-width: 1179px) {
+  .department .division {
+    height: 60vw;
+  }
+}
+@media screen and (max-width: 539px) {
+  .department .division {
+    background: none;
+    height: auto;
+  }
+  .department .division .div_tree {
+    position: relative;
+    top: 0;
+    opacity: 1;
+  }
+}
 #header {
   width: 100%;
   border-bottom: 1px solid #ddd;

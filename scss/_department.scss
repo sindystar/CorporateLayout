@@ -45,7 +45,26 @@
         color: #aaa;
       }
     }
+  }
+}
+@media screen and (max-width:$tablet) {
+  .department {
+    .division {
+      height: 60vw;
+    }
+  }
+}
 
-
+@media screen and (max-width:$mobile) {
+  .department {
+    .division {
+      background: none;
+      height: auto;
+      .div_tree {
+        position: relative;
+        top: 0;
+        opacity: 1;
+      }
+    }
   }
 }
