@@ -59,7 +59,98 @@
     <div class="sub_visual"></div>
     <div class="inner">
       <h1>JOIN <span>회원가입 페이지</span></h1>
-      <!-- 컨텐츠가 들어 가는 부분 -->
+      <form action="index.html"></form>
+      action 데이터를 보낼 url적는 곳
+      <fieldset>
+        <legend class="hidden">회원 가입 양식 폼 </legend>
+        <h2><label for="terms">회원 약관</label></h2>
+        <textarea name="terms" id="terms" cols="30" rows="10">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, placeat. Laudantium unde eaque assumenda iusto error quos saepe deserunt nemo voluptates pariatur ullam eum nesciunt vitae minima fugiat, quibusdam accusantium quisquam. Sint corporis nisi cumque nesciunt culpa ipsam perferendis odit aut sunt deserunt inventore ducimus officiis, odio dolor saepe iste explicabo itaque repellat minima, quaerat quis labore aspernatur nemo illo? Maxime excepturi eum voluptatem est ex dignissimos nesciunt labore libero expedita, molestias aliquid facere deleniti minima. Quisquam adipisci animi doloremque, blanditiis illo obcaecati explicabo quibusdam eum totam, quos eius! Ea earum velit fugiat, aut numquam nam veritatis rem assumenda alias?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe amet laborum fuga ad, nemo deserunt ipsum iste nihil itaque. Provident laboriosam exercitationem sapiente consectetur architecto nisi iste, hic quae sit, ex nobis quia maxime repudiandae asperiores reprehenderit repellendus? Quo quos voluptates unde! Ratione quis eos earum qui sed repudiandae distinctio ut. Sit qui deserunt perspiciatis similique accusantium nemo. Assumenda dicta laborum magnam id aliquid vitae non? Maiores nemo quo tenetur rem quos consectetur magni quas dolores temporibus laboriosam repudiandae, at, natus sunt in saepe. Rem, dolorum commodi mollitia porro tempora voluptatibus dicta. Maiores accusantium dolores eveniet perspiciatis ut veniam laborum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptas ut at ex neque consectetur. Consequatur nemo commodi doloribus magnam, modi quos! Ipsa minus iusto eos saepe vero quaerat. Repellat?
+        </textarea>
+        <div class="agreement">
+          <input type="checkbox" name="agree" id="agree">
+          <label for="agree">약관에 동의 합니다</label>
+        </div>
+
+        <h2>MEMBER INFORMATION</h2>
+        <table>
+          <caption class="hidden">회원정보 입력 양식 테이블</caption>
+
+          <tr>
+            <th scope="row"><label for="id">USER ID</label></th>
+            <td>
+              <input type="text" name="id" id="id" required placeholder="아이디를 입력해주세요">
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row"><label for="pwd1">PASSWORD</label></th>
+            <td>
+              <input type="password" name="ped1" id="ped1" required placeholder="비밀번호를 입력해주세요">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="pwd2">PASSWORD</label></th>
+            <td>
+              <input type="password" name="ped2" id="ped2" required placeholder="비밀번호를 입력해주세요">
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">HOBBY</th>
+            <td>
+              <label for="game">
+                <input type="checkbox" name="hobby" id="game" value="game">GAME
+              </label>
+              <label for="music">
+                <input type="checkbox" name="hobby" id="music" value="music">MUSIC
+              </label>
+              <label for="read">
+                <input type="checkbox" name="hobby" id="read" value="read">READING
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">GENDER</th>
+            <td>
+              <label for="male">
+                <input type="radio" name="gender" id="male" value="male">MAN
+              </label>
+              <label for="female">
+                <input type="radio" name="gender" id="female" value="female">WOMAN
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row"><label for="email">E-MAIL</label></th>
+            <td>
+              <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해주세요">
+              <select name="company" id="company">
+                <option value="">선택하세요</option>
+                <option value="naver">@naver.com</option>
+                <option value="daum">@hanmail.net</option>
+                <option value="nate">@nate.com</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="comments">COMMENTS</label></th>
+            <td>
+              <textarea name="comments" id="comments" cols="30" rows="10" placeholder="남기는 말씀을 써주세요"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="2">
+              <input type="reset" value="CANCLE">
+              <input type="submit" value="SUBMIT">
+            </th>
+          </tr>
+        </table>
+      </fieldset>
     </div>
   </section>
 
