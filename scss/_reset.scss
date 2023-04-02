@@ -17,6 +17,12 @@ a{
   top: -9999999px;
   opacity: 0;
 }
+fieldset {
+  border: none;
+}
+table {
+  border-collapse: collapse;
+}
 
 .wrap::after{
   content: '';

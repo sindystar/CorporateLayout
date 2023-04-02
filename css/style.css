@@ -21,6 +21,14 @@ a {
   opacity: 0;
 }
 
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
 .wrap::after {
   content: "";
   display: block;
