@@ -520,6 +520,64 @@ table {
     opacity: 1;
   }
 }
+.location {
+  width: 100%;
+}
+.location #map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+.location::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.location .traffic {
+  float: left;
+}
+.location .traffic li {
+  float: left;
+  margin-right: 20px;
+}
+.location .traffic li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: #555;
+  font: bold 12px/40px "맑은고딕";
+  color: #fff;
+  text-align: center;
+  border: 1px solid #555;
+}
+.location .traffic li.on a {
+  background: #fff;
+  color: #333;
+}
+.location .branch {
+  float: left;
+  margin-left: 10px;
+}
+.location .branch li {
+  float: left;
+  margin-left: 10px;
+}
+.location .branch a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: #555;
+  font: bold 12px/40px "맑은고딕";
+  color: #fff;
+  text-align: center;
+  border: 1px solid #555;
+}
+.location .branch.on a {
+  background: #fff;
+  color: #333;
+}
+
 .join .sub_visual {
   background: #eeffff;
 }
