@@ -556,8 +556,7 @@ table {
   color: #333;
 }
 .location .branch {
-  float: left;
-  margin-left: 10px;
+  float: right;
 }
 .location .branch li {
   float: left;
