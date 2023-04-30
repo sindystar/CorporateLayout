@@ -14,10 +14,11 @@ let zoom = true;
 
 
 mapOption = { 
-    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+    center: new kakao.maps.LatLng(37.3340318, 126.8362407), // 지도의 중심좌표
     level: 3 // 지도의 확대 레벨
 };
 // 보여질 지도의 욥션을 설정 
+
 
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption); 
@@ -26,7 +27,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 var markerOptions = [
     {
         title: "본점", //제목
-        latlng: new kakao.maps.LatLng(37.4764153, 126.8023891), //지도의 위치
+        latlng: new kakao.maps.LatLng(37.3340318, 126.8362407), //지도의 위치
         imageSrc: 'img/marter1.png', //마커 이미지경로
         imgSize: new kakao.maps.Size(232, 99), //마커이미지 크기
         imgPos: { offset: new kakao.maps.Point(116,69) }, //마커이미지 위치
@@ -34,7 +35,7 @@ var markerOptions = [
     },
     {
         title: "지점1",
-        latlng: new kakao.maps.LatLng(37.4764153, 126.8023891), 
+        latlng: new kakao.maps.LatLng(37.5053274, 126.7464023), 
         imageSrc: 'img/marter2.png', 
         imgSize: new kakao.maps.Size(232, 99), 
         imgPos: { offset: new kakao.maps.Point(116,69) }, 
@@ -42,7 +43,7 @@ var markerOptions = [
     },
     {
         title: "지점2",
-        latlng: new kakao.maps.LatLng(37.4764153, 126.8023891), 
+        latlng: new kakao.maps.LatLng(37.3764175, 127.2290772), 
         imageSrc: 'img/marter2.png', 
         imgSize: new kakao.maps.Size(232, 99), 
         imgPos: { offset: new kakao.maps.Point(116,69) }, 
@@ -82,7 +83,7 @@ window.onresize = () => {
     //위에 변수에서 활성화 되어있는 li안의 data-index 속성 값을 가져옴 - 0,1,2 같은 숫자가 담김 
 
     map.setCenter(markerOptions[active_index].latlng);
-    setCenter함수를 사용하여 지도를 정중앙에 배치하는데 위치는 위에서 변수로 담은 현재 활성화 되어 있는 인덱스로 위치
+    // setCenter함수를 사용하여 지도를 정중앙에 배치하는데 위치는 위에서 변수로 담은 현재 활성화 되어 있는 인덱스로 위치
 }
 
 t_on.addEventListener("click", (e) => {
@@ -111,5 +112,41 @@ t_off.addEventListener("click", (e) => {
 
 
 
-// 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);  
+//일반 지도와 스카이뷰로 지도 타입을 전환할수 있는 지도 타입 컨트롤을 생성 합니다.
+var MapTypeControl = new kakao.maps.MapTypeControl();
+
+// 지도에 컨트롤을 추가해야 지도위에 표시 됩니다
+// kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의 하는데 TOPRIGHT는 오른쪽 위를 의미합니다.
+map.addControl(MapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+//지도 확대 축소를 제어할수 있는 줌 컨트롤을 생성 합니다.
+var zoomControl = new kakao.mapsZoomcControl();
+map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+setDraggable(drag);
+setZoomable(zoom);
+
+
+
+
+
+
+//버튼 클릭에 따라 지도 확대, 축소 기능을 막거나 풀고 싶은 경우에는 map.setZoomable 함수를 사용합니다
+function setZoomable(zoomable) {
+    //마우스 힐로 지도 확대, 축소 가능 여부를 설정 합니다
+    map.setZoomable(zoomable);
+}
+
+//버튼 클릭에 따라 지도 이동 기능을 막거나 풀고 싶은 경우에는 map.setDraggable 함수를 사용합니다.
+function setDraggable(draggable) {
+    //마우스 드래그로 지도 이동 가능 여부를 설정합니다
+    map.setDraggable(draggable);
+}
+
+
+
+function moveTo(target) {  //함수가 위치 시킬 값을 매개로 받아서
+    var moveLatlng = target; //밑에 전달해서 최종 지도를 움직임 
+    map.setCenter(moveLatlng); //지도를 중심으로 이동시킴 
+}
+
