@@ -10,10 +10,11 @@ $mobile: 539px;
 @import "location.scss";
 @import "gallery.scss";
 @import "join.scss";
+@import "youtube.scss";
 
 
 
-#header{
+#header {
   width: 100%;
   border-bottom: 1px solid #ddd;
 
@@ -26,7 +27,7 @@ $mobile: 539px;
       position: absolute;
       left: 0;
       bottom: 15px;
-      >a{
+      > a{
         font: bold 24px/1 'arial';
         color: #444;
       }
@@ -58,7 +59,7 @@ $mobile: 539px;
           float: left;
           margin-left: 20px;
 
-          a{
+          a {
             font: 12px/1 'arial';
             color: #999;
           }
