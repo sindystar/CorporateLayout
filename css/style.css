@@ -562,7 +562,7 @@ table {
   float: left;
   margin-left: 10px;
 }
-.location .branch a {
+.location .branch li a {
   display: block;
   width: 200px;
   height: 40px;
@@ -572,7 +572,7 @@ table {
   text-align: center;
   border: 1px solid #555;
 }
-.location .branch.on a {
+.location .branch li.on a {
   background: #fff;
   color: #333;
 }

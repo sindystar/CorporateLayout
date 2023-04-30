@@ -19,16 +19,15 @@ mapOption = {
 };
 // 보여질 지도의 욥션을 설정 
 
-
-// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption); 
+// 지도를 표시할 div와  지도 옵션으로  지도를 최종 생성하는 코드
 
 // 마커 생성하는 옵션을 객체 형태로 각값을 설정하고, 그값을 배열로 변수에 저장한것 
 var markerOptions = [
     {
         title: "본점", //제목
         latlng: new kakao.maps.LatLng(37.3340318, 126.8362407), //지도의 위치
-        imageSrc: 'img/marter1.png', //마커 이미지경로
+        imgSrc: 'img/marter1.png', //마커 이미지경로
         imgSize: new kakao.maps.Size(232, 99), //마커이미지 크기
         imgPos: { offset: new kakao.maps.Point(116,69) }, //마커이미지 위치
         button: branch_btns[0], // 마커와 매치할 버튼의 인덱스 
@@ -36,7 +35,7 @@ var markerOptions = [
     {
         title: "지점1",
         latlng: new kakao.maps.LatLng(37.5053274, 126.7464023), 
-        imageSrc: 'img/marter2.png', 
+        imgSrc: 'img/marter2.png', 
         imgSize: new kakao.maps.Size(232, 99), 
         imgPos: { offset: new kakao.maps.Point(116,69) }, 
         button: branch_btns[1], 
@@ -44,7 +43,7 @@ var markerOptions = [
     {
         title: "지점2",
         latlng: new kakao.maps.LatLng(37.3764175, 127.2290772), 
-        imageSrc: 'img/marter2.png', 
+        imgSrc: 'img/marter2.png', 
         imgSize: new kakao.maps.Size(232, 99), 
         imgPos: { offset: new kakao.maps.Point(116,69) }, 
         button: branch_btns[2], 
@@ -52,11 +51,11 @@ var markerOptions = [
 ];
 
 for (let i = 0; i < markerOptions.length; i++) {
-    new kakao.maps.marker({
+    new kakao.maps.Marker({
         map: map, //앞의 map은 Maker생성시 필요한 정보를 받는 변수 이고, 뒤의 map은 우리가 위에서 선언한 map이다
-        position:markerOptions[i].latlng, //지도의 위치, 위도 경도 값 -이 값은 우리가 makerOptions에 latlng값으로 저장 했으므로 해당 객체배열에 접근해서 기져온다 
+        position: markerOptions[i].latlng, //지도의 위치, 위도 경도 값 -이 값은 우리가 makerOptions에 latlng값으로 저장 했으므로 해당 객체배열에 접근해서 기져온다 
         title: markerOptions[i].title, //제목 값이고 위와 같이 접근해서 가지고 온다
-        image: new kakao.maps.MakerImage(markerOptions[i].imageSrc, markerOptions[i].imgSize, markerOptions[i].imgPos),
+        image: new kakao.maps.MakerImage(markerOptions[i].imgSrc, markerOptions[i].imgSize, markerOptions[i].imgPos),
         // new kakao.maps.MakerImage(imageSrc, imgeSize, imageOption),
         // 카카오에서 제공하는 MakerImage라는 메서드를 사용하는데()안의 매개 변수 자리에 필요한 값이 markerOptions에 있기 때문에 각 값을 해당 객체 배열에 접근해서 가지고 오는것
     });
@@ -117,7 +116,7 @@ var MapTypeControl = new kakao.maps.MapTypeControl();
 
 // 지도에 컨트롤을 추가해야 지도위에 표시 됩니다
 // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의 하는데 TOPRIGHT는 오른쪽 위를 의미합니다.
-map.addControl(MapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
 //지도 확대 축소를 제어할수 있는 줌 컨트롤을 생성 합니다.
 var zoomControl = new kakao.mapsZoomcControl();
