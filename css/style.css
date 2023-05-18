@@ -1190,4 +1190,68 @@ table {
   color: #777;
 }
 
+@media screen and (max-width: 1179px) {
+  #header .inner {
+    width: 100%;
+    height: 100px;
+  }
+  #header .inner > h1 {
+    left: 20px;
+  }
+  #header .inner .menuWeb {
+    display: block;
+  }
+  #header .inner .menuMo {
+    display: block;
+  }
+  #visual {
+    height: calc(100vh - 101px);
+    background: url(../img/visual1.jpg) no-repeat center/cover;
+  }
+  #visual video {
+    display: none;
+  }
+  #visual .inner {
+    width: 100%;
+    padding: 0px 30px;
+  }
+  #news {
+    padding: 100px 30px;
+  }
+  #news .inner {
+    width: 100%;
+  }
+  #news .inner .wrap article {
+    width: 49%;
+    margin-right: 2%;
+  }
+  #news .inner .wrap article:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  #news .inner .wrap article .pic {
+    height: 20vmax;
+  }
+  #brand {
+    padding: 100px 30px;
+  }
+  #brand .inner {
+    width: 100%;
+  }
+  #brand .inner .wrap article:nth-of-type(1) {
+    width: 49%;
+    margin-right: 2%;
+  }
+  #brand .inner .wrap article:nth-of-type(2) {
+    width: 49%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  #brand .inner .wrap article:nth-of-type(3) {
+    width: 49%;
+  }
+  #brand .inner .wrap article:nth-of-type(4) {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

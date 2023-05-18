@@ -487,3 +487,86 @@ $mobile: 539px;
     }
   }
 }
+
+//tablet 
+@media screen and (max-width:$tablet) {
+  #header {
+    //웹에서의 네스팅에 따라서 네스팅은 반드시 웹의 네스팅과 동일해야 한다.
+    .inner {
+      width: 100%; //고정 픽셀 1180px을 준 웹버전과 달리 
+      //2.원칙 : 미디어 쿼리에서는 고정 픽셀은 %로 바꾸되 모두(width,margin ( left, right)합쳐서 100%가 되어야 한다
+      height: 100px;
+      //3.원칙 : 미디어 쿼리 구간에 작성한 코드는 기존(웹)의 코드를 덮어쓰는것으로 바뀌거나 추가 되는 내용만 적는다 
+      > h1 {
+        left:20px;
+        //웹버전의 경우 left:0;인 이유는 1180px로 가운데 배치해서 굳이 좌측 여백이 필요 없었기 때문이다. 하지만 1179px로 미디어 쿼리 구간에는 주지 않으면 좌측에 붙기 대문에 여백을 준것
+      }
+      .menuWeb {
+        display: block;
+      }
+      .menuMo {
+        display: block;
+      }
+    }
+  }
+  #visual {
+    height: calc(100vh - 101px);
+    // 웹페이지에서는 height : calc(100vh -121px);이지만 위의 헤더 영역에서 height값을 120-> 100으로 변경함에 따라 이곳도 수정을 해주어야 한다
+    // 원칙:다른 구간에서 변경되어 영행을 주는 코드가 있다면 잊지 말고 고려해서 수정해 줄것 
+    background: url(../img/visual1.jpg) no-repeat center/cover;
+    video {
+      display: none;
+    }
+    .inner {
+      width: 100%;
+      padding: 0px 30px;
+    }
+  }
+  #news {
+    padding: 100px 30px;
+    .inner {
+      width: 100%;
+      .wrap {
+        article {
+          width: 49%;
+          margin-right: 2%;
+          &:nth-of-type(2n) {
+            margin-right: 0;
+          }
+          .pic {
+            height: 20vmax;
+          }
+        }
+      }
+    }
+  }
+  #brand {
+    padding: 100px 30px;
+    .inner {
+      width: 100%;
+      .wrap {
+        article {
+          &:nth-of-type(1) {
+            width: 49%;
+            margin-right: 2%;
+          }
+          &:nth-of-type(2) {
+            width: 49%;
+            margin-right: 0px;
+            margin-bottom: 20px;
+          }
+          &:nth-of-type(3) {
+            width: 49%;
+          }
+          &:nth-of-type(4) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+//mobile {
+  @media screen and (max-width: $mobile) {
+    
+  }
