@@ -1,0 +1,136 @@
+#gallery {
+	#searchBox {
+		width: 100%;
+		padding: 50px;
+		font-size: 0;
+		#search {
+			width: 300px;
+			height: 30px;
+			border: 1px solid #333;
+			padding-left: 10px;
+		}
+		.btnSearch {
+			width: 80px;
+			height: 30px;
+			background: #333;
+			font: bold 12px/30px "arial";
+			color: #fff;
+			text-align: center;
+			border: none;
+			cursor: pointer;
+			margin-left: 10px;
+			vertical-align: top;
+		}
+	}
+	#wrap {
+		width: 100%;
+		padding: 50px;
+		.loading {
+			width: 100px;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: 1s;
+			&.off {
+				opacity: 0;
+			}
+		}
+
+		#list {
+			width: 100%;
+			opacity: 0;
+			transform: translateY(100px);
+			transition: 1s;
+
+			&.on {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			li {
+				float: left;
+				width: calc(100% / 4);
+				padding: 10px;
+				//li에 각각 10px패딩을 주어서 결과적으로 li사이의 간격을 총 20px의 간격을 가지게 하였다. 그렇기때문에 따로 마진값을 주지 않아도 된다
+				//이점은 마진값을 주어서 공간을 벌리면 마지막 컨텐츠에 마진 0이라는 코드를 따로 또 안써도 된다
+				div {
+					width: 100%;
+					padding: 20px;
+					box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+					border-radius: 5px;
+					&:hover {
+						a {
+							> img {
+								filter: grayscale(0%);
+							}
+						}
+					}
+					a {
+						/* img를 a태그로 감싸는 이유는 img를 감싸서 img를 더 잘 넣을 수 있도록 하는 효과, 갤러리 이미지의 경우 클릭시 이미지가 나타나는데 2가지 방법이 있어요. 1. 해당 싸이트 주소로 이동을해서(링크) 보이는 방법(1번은 해당 싸이트가 외부에서 오픈되는것이 싸이트 규칙상 허용되지 않는경우) 2. 허용된 경우에는 지금싸이트에서 열릴수 있도록 a태그의 링크를 막고 사용한다  
+            그래서 a태그로 img를 감싸고있다
+            */
+						> img {
+							width: 100%;
+							// height: 100%; 주석처리하는 이유는 isotope 플러그인을 사용하기 위해서 높이 값을 주지않음
+							filter: grayscale(100%);
+						}
+					}
+					p {
+						font: 12px/1.2 "arial";
+						color: #777;
+						margin-top: 10px;
+						margin-bottom: 20px;
+					}
+					span {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						> img {
+							width: 20px;
+							height: 20px;
+							border-radius: 50%;
+							margin-right: 5px;
+						}
+						strong {
+							font: 11px/1 "arial";
+							color: orange;
+						}
+					}
+				}
+			}
+		}
+	}
+	aside {
+		width: 100%;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.8);
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 5vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.con {
+			width: 100%;
+			height: 100%;
+			> img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+		.close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+}
